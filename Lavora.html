@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lavora con Noi - SalusLink</title>
+  <link rel="stylesheet" href="style.css"> <!-- Collegamento al file CSS per lo stile -->
+  <style>
+    /* Stile aggiuntivo per la colonna */
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    /* Stile per l'allineamento dei campi del modulo */
+    label {
+      margin-bottom: 8px;
+    }
+
+    /* Stile per il pulsante di invio */
+    input[type="submit"] {
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    function prepareEmail() {
+      var nome = document.getElementById("nome").value;
+      var cognome = document.getElementById("cognome").value;
+      var citta = document.getElementById("citta").value;
+      var telefono = document.getElementById("telefono").value;
+      var email = document.getElementById("email").value;
+      var professione = document.getElementById("professione").value;
+      var descrizione = document.getElementById("descrizione").value;
+
+      var oggetto = "Candidatura come professionista";
+      var corpoEmail = "Buonasera, invio la mia candidatura per richiedere l'inserimento come professionista all'interno della vostra applicazione.\n\n";
+      corpoEmail += "Nome: " + nome + "\n";
+      corpoEmail += "Cognome: " + cognome + "\n";
+      corpoEmail += "Città di residenza lavorativa: " + citta + "\n";
+      corpoEmail += "Numero di telefono: " + telefono + "\n";
+      corpoEmail += "E-mail: " + email + "\n";
+      corpoEmail += "Professione: " + professione + "\n";
+      corpoEmail += "Una breve descrizione: " + descrizione + "\n\n";
+      corpoEmail += "Grazie,\n" + nome + " " + cognome;
+
+      document.forms["candidaturaForm"].action = "mailto:elisa.niccoli@virgilio.it?subject=" + encodeURIComponent(oggetto) + "&body=" + encodeURIComponent(corpoEmail);
+    }
+  </script>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">SalusLink</div>
+    <div class="centered-text">Your wellness, Our mission</div>
+    <div class="menu">
+      <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+          <a href="index.html">Home</a>
+          <a href="chi_siamo.html">Chi siamo</a>
+          <a href="download.html">Scarica la nostra app</a>
+          <a href="vantaggi.html">Scopri i vantaggi</a>
+          <a href="#">Lavora con noi</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <h1>Lavora con Noi</h1>
+    <p>Unisciti al nostro team e contribuisci al benessere della nostra community.</p>
+    
+    <form name="candidaturaForm" method="post" enctype="text/plain">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="cognome">Cognome:</label>
+      <input type="text" id="cognome" name="cognome" required>
+
+      <label for="citta">Città di residenza lavorativa:</label>
+      <input type="text" id="citta" name="citta" required>
+
+      <label for="telefono">Numero di telefono:</label>
+      <input type="tel" id="telefono" name="telefono" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="professione">Professione:</label>
+      <input type="text" id="professione" name="professione" required>
+
+      <label for="descrizione">Una breve descrizione:</label>
+      <textarea id="descrizione" name="descrizione" rows="4" required></textarea>
+
+      <input type="submit" value="Invia Candidatura" onclick="prepareEmail()">
+    </form>
+  </div>
+</body>
+</html>

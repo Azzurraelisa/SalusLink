@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e6f7f7; /* Colore di sfondo associato al wellness */
+}
+
+.header {
+  background-color: #57b2b2; /* Colore della barra fissa */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  left: -10px; /* Modificato lo spostamento a sinistra */
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap; /* Impedisce il riavvolgimento del testo su più righe */
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #d3d3d3; /* Cambiato colore al passaggio del mouse */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.content {
+  padding: 80px 20px;
+  text-align: center;
+  color: #333;
+}
+
+.centered-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+a {
+  color: #2196F3;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1e4ac5;
+}
