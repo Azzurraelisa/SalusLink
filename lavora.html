@@ -35,17 +35,17 @@
       var descrizione = document.getElementById("descrizione").value;
 
       var oggetto = "Candidatura come professionista";
-      var corpoEmail = "Buonasera, invio la mia candidatura per richiedere l'inserimento come professionista all'interno della vostra applicazione.\n\n";
-      corpoEmail += "Nome: " + nome + "\n";
-      corpoEmail += "Cognome: " + cognome + "\n";
-      corpoEmail += "Città di residenza lavorativa: " + citta + "\n";
-      corpoEmail += "Numero di telefono: " + telefono + "\n";
-      corpoEmail += "E-mail: " + email + "\n";
-      corpoEmail += "Professione: " + professione + "\n";
+      var corpoEmail = "Buonasera,\n invio la mia candidatura per richiedere l'inserimento come professionista all'interno della vostra applicazione.\n\n Di seguito i miei dati:\n\n";
+      corpoEmail += "Nome: " + nome + "\n\n";
+      corpoEmail += "Cognome: " + cognome + "\n\n";
+      corpoEmail += "Città di residenza lavorativa: " + citta + "\n\n";
+      corpoEmail += "Numero di telefono: " + telefono + "\n\n";
+      corpoEmail += "E-mail: " + email + "\n\n";
+      corpoEmail += "Professione: " + professione + "\n\n";
       corpoEmail += "Una breve descrizione: " + descrizione + "\n\n";
       corpoEmail += "Grazie,\n" + nome + " " + cognome;
 
-      document.forms["candidaturaForm"].action = "mailto:elisa.niccoli@virgilio.it?subject=" + encodeURIComponent(oggetto) + "&body=" + encodeURIComponent(corpoEmail);
+      document.forms["candidaturaForm"].action = "mailto:elisa.niccoli1@edu.unifi.it?subject=" + encodeURIComponent(oggetto) + "&body=" + encodeURIComponent(corpoEmail);
     }
   </script>
 </head>
