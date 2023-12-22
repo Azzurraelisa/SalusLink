@@ -86,6 +86,7 @@ a:hover {
     align-items: flex-end;
     min-height: 100%;
     padding: 20px;
+    background-color: #8ba4d5; /* Colore di sfondo */
 }
 
 .footer a {
