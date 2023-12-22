@@ -2,11 +2,12 @@ body {
   font-size: 16px;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #e6f7f7; /* Colore di sfondo associato al wellness */
+  background-color: #e7eff7; /* Colore di sfondo */
+  color: #263869;
 }
 
 .header {
-  background-color: #57b2b2; /* Colore della barra fissa */
+  background-color: #203e99; /* Colore della barra fissa */
   color: white;
   text-align: center;
   padding: 10px;
