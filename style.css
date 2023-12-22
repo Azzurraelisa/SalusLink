@@ -129,3 +129,9 @@ img {
   font-size: 14px;
   color: #555;
 }
+
+.small-logo {
+  max-width: 100px; /* Imposta la larghezza massima del logo */
+  max-height: 100px; /* Imposta l'altezza massima del logo */
+  margin-bottom: 10px; /* Aggiunge un margine sotto il logo */
+}
