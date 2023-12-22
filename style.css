@@ -1,4 +1,5 @@
 body {
+  font-size: 16px;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #e6f7f7; /* Colore di sfondo associato al wellness */
@@ -38,6 +39,7 @@ body {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
   left: -10px; /* Modificato lo spostamento a sinistra */
+  border: 1px solid #ccc;
 }
 
 .dropdown-content a {
@@ -82,10 +84,46 @@ a:hover {
     justify-content: center;
     align-items: flex-end;
     min-height: 100%;
+    padding: 20px;
 }
+
+.footer a {
+  color: #888;
+}
+
+.footer a:hover {
+  color: #555;
+}
+
 
 img {
     max-width: 100%;
     max-height: 100%;
     margin-bottom: 20px;
+    border-radius: 8px; /* Bordo arrotondato */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra */
+}
+
+/* Stile per la sezione delle foto */
+.foto-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px; /* Modifica secondo le tue preferenze */
+}
+
+/* Stile per ogni persona nella sezione delle foto */
+.persona {
+  text-align: center;
+}
+
+.persona img {
+  max-width: 100%;
+  border-radius: 50%; /* Rendi le immagini circolari */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiungi ombra */
+  margin-bottom: 10px; /* Modifica secondo le tue preferenze */
+}
+
+.persona p {
+  font-size: 14px;
+  color: #555;
 }
