@@ -21,6 +21,10 @@ body {
   font-weight: bold;
 }
 
+.logo-container {
+  text-align: center; /* Allinea il testo sotto il logo */
+}
+
 .menu {
   display: flex;
   justify-content: space-between;
